@@ -46,6 +46,9 @@ aside ul {
 .customColor path {
   fill: var(--asideSvgColor);
 }
+.Notification path {
+  fill: var(--arrowColor);
+}
 .homeButtons {
   width: 57px;
   height: 57px;
@@ -369,7 +372,7 @@ main {
   color: var(--redButtonColor);
 }
 .online-friend .watchButton:hover {
-  background-color: var(--grayButtonColor);
+  background-color: var(--redButtonColorHover);
   scale: 1.1;
 }
 .online-friend .joinButton {
@@ -380,7 +383,7 @@ main {
   color: var(--yellowButtonColor);
 }
 .online-friend .joinButton:hover {
-  background-color: var(--ContinueWatchingButtonColorHover);
+  background-color: var(--yellowButtonHover);
   scale: 1.1;
 }
 .comunity .message {
@@ -642,7 +645,7 @@ main {
   transition: 300ms;
 }
 .union-container .red-button:hover {
-  background-color: var(--grayButtonColor);
+  background-color: var(--redButtonColorHover);
   scale: 1.1;
 }
 .union-container .yellow-button {
@@ -658,7 +661,7 @@ main {
   color: var(--socialTitleText);
 }
 .union-container .gray-button:hover {
-  background-color: var(--yellowButtonHover);
+  background-color: var(--grayButtonHover);
   scale: 1.1;
 }
 .library .anime-name {

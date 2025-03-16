@@ -203,81 +203,48 @@ a {
   --arrowColor: #ffffff70;
 }
 body.dark {
-  --asideColor: linear-gradient(
-    180deg,
-    rgba(240, 250, 255, 1) 0%,
-    rgba(220, 235, 250, 1) 100%
-  );
-  --secondMainContainerColor: linear-gradient(
-    180deg,
-    rgba(240, 250, 255, 1) 0%,
-    rgba(220, 235, 250, 1) 100%
-  );
-  --animeAdsColor: linear-gradient(
-    180deg,
-    rgba(200, 220, 240, 1) 0%,
-    rgba(180, 200, 230, 1) 100%
-  );
-  --comunityBoard: linear-gradient(
-    180deg,
-    rgba(200, 220, 240, 1) 0%,
-    rgba(180, 200, 230, 1) 100%
-  );
-  --lastAnimeBoard: linear-gradient(
-    180deg,
-    rgba(190, 210, 230, 1) 0%,
-    rgba(170, 190, 220, 1) 100%
-  );
-  --messageBackgroundColor: linear-gradient(
-    180deg,
-    rgba(190, 210, 230, 1) 0%,
-    rgba(170, 190, 220, 1) 100%
-  );
-  --messageInputColor: linear-gradient(
-    180deg,
-    rgba(190, 210, 230, 1) 0%,
-    rgba(170, 190, 220, 1) 100%
-  );
+  --asideColor: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  --secondMainContainerColor: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  --animeAdsColor: linear-gradient(180deg, #f1f3f5 0%, #e9ecef 100%);
+  --comunityBoard: linear-gradient(180deg, #f1f3f5 0%, #e9ecef 100%);
+  --lastAnimeBoard: linear-gradient(180deg, #dee2e6 0%, #ced4da 100%);
+  --messageBackgroundColor: linear-gradient(180deg, #dee2e6 0%, #ced4da 100%);
+  --messageInputColor: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
   --libraryDivBackgroundColor: linear-gradient(
     180deg,
-    rgba(200, 220, 240, 1) 0%,
-    rgba(180, 200, 230, 1) 100%
+    #f1f3f5 0%,
+    #e9ecef 100%
   );
   --accessoriesDivBackgroundColor: linear-gradient(
     45deg,
-    #a1c4fd,
-    #84b6f1,
-    #5a8ed1
+    #d3d3d3,
+    #f5f5f5,
+    #f0e4d7,
+    #ffffff
   );
-  --animeListStyleHover: linear-gradient(
-    180deg,
-    rgba(200, 220, 240, 1) 0%,
-    rgba(180, 200, 230, 1) 100%
-  );
-  --buttonBackgroundColor: linear-gradient(
-    180deg,
-    rgba(240, 250, 255, 1) 0%,
-    rgba(220, 235, 250, 1) 100%
-  );
-  --buttonHoverBoxShadow: 0 4px 10px rgba(180, 210, 230, 0.4),
-    0 2px 20px rgba(150, 190, 220, 0.6), 0 8px 30px rgba(120, 170, 210, 0.8);
-  --button-background-color: #d0e8ff;
-  --borderBackgroundColor: #00000030;
-  --inputBackgroundColor: #c8e0ff80;
-  --whiteColor: #333;
-  --watchButtonColor: #a5c5e0;
-  --watchButtonColorParagraph: #33333340;
-  --socialTitleText: #33333380;
-  --mostPopularAnimeParagraph: #33333360;
-  --lastAnimeBoardButton: #4a8bb0;
-  --ContinueWatchingButtonColor: #33333310;
-  --ContinueWatchingButtonColorHover: #4a8bb020;
-  --yellowButtonColor: #ffad09;
-  --yellowButtonHover: #ffcc6640;
-  --redButtonColor: #ff4a50;
-  --grayButtonColor: #ff4a5040;
-  --grayButtonHover: #d0e8ff80;
-  --footerLineColor: #13131316;
-  --asideSvgColor: rgb(4, 4, 146);
-  --arrowColor: #4a8bb0;
+
+  --animeListStyleHover: linear-gradient(180deg, #e9ecef 0%, #dee2e6 100%);
+  --buttonHoverBoxShadow: 0 0 10px rgba(150, 150, 150, 0.7),
+    0 0 10px rgba(200, 200, 200, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+  --buttonBackgroundColor: linear-gradient(45deg, #adb5bd, #868e96);
+  --button-background-color: hsl(200, 3%, 83%);
+  --borderBackgroundColor: #00000010;
+  --inputBackgroundColor: hsla(0, 6%, 76%, 0.603);
+  --whiteColor: #212529;
+  --watchButtonColor: #f8f9fa;
+  --watchButtonColorParagraph: #21252960;
+  --socialTitleText: #21252980;
+  --mostPopularAnimeParagraph: #21252960;
+  --lastAnimeBoardButton: #6c757d;
+  --ContinueWatchingButtonColor: #00000005;
+  --ContinueWatchingButtonColorHover: #adb5bd20;
+  --yellowButtonColor: #ffc107;
+  --yellowButtonHover: #ffd64f5d;
+  --redButtonColor: #dc3545;
+  --redButtonColorHover: #dc354634;
+  --grayButtonColor: #adb5bd;
+  --grayButtonHover: #868e964d;
+  --footerLineColor: #00000010;
+  --asideSvgColor: #343a40;
+  --arrowColor: #495057;
 }
