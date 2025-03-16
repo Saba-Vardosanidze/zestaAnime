@@ -5,28 +5,20 @@
 body {
   font-family: "monsterant";
   background-color: var(--button-background-color);
-}
-:root {
-  --button-background-color: #21173b;
+  transition: 300ms;
 }
 .main-container {
   display: flex;
   max-width: 1615px;
-  height: 1206px;
+  width: 100%;
   overflow: hidden;
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 aside {
-  height: 1206px;
   width: 153px;
-  background: linear-gradient(
-    180deg,
-    rgba(17, 5, 44, 1) 0%,
-    rgba(17, 5, 44, 1) 2%,
-    rgba(17, 5, 44, 1) 84%
-  );
-  border-right: 3px solid #ffffff20;
+  background: var(--asideColor);
+  border-right: 3px solid var(--borderBackgroundColor);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -51,6 +43,9 @@ aside ul {
   flex-direction: column;
   gap: 63px;
 }
+.customColor path {
+  fill: var(--asideSvgColor);
+}
 .homeButtons {
   width: 57px;
   height: 57px;
@@ -59,21 +54,20 @@ aside ul {
   align-items: center;
   border-radius: 18px;
   transition: 500ms;
+  cursor: pointer;
+}
+#themeToggle img {
+  width: 25px;
+  height: 25px;
 }
 .homeButtons:hover {
-  background: linear-gradient(45deg, #a4508b, #5f0a87, #2d033b);
+  background: var(--accessoriesDivBackgroundColor);
   scale: 1.1;
-  box-shadow: 0 4px 10px rgba(164, 80, 139, 0.4),
-    0 2px 20px rgba(95, 10, 135, 0.6), 0 8px 30px rgba(45, 3, 59, 0.8);
+  box-shadow: var(--buttonHoverBoxShadow);
 }
 /*  */
 .second_main_container {
-  background: linear-gradient(
-    180deg,
-    rgba(17, 5, 44, 1) 0%,
-    rgba(17, 5, 44, 1) 2%,
-    rgba(17, 5, 44, 1) 84%
-  );
+  background: var(--secondMainContainerColor);
   width: 1489px;
 }
 header {
@@ -101,15 +95,17 @@ header {
   border-radius: 25px;
   border: unset;
   outline: none;
-  background-color: #261b3e80;
+  background-color: var(--inputBackgroundColor);
   padding: 20px 64px;
-  color: white;
+  color: var(--whiteColor);
   transition: 500ms;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .Search-main-container input:focus {
-  box-shadow: 0 4px 10px rgba(164, 80, 139, 0.4),
-    0 2px 20px rgba(95, 10, 135, 0.6), 0 8px 30px rgba(45, 3, 59, 0.8);
+  box-shadow: var(--buttonHoverBoxShadow);
+}
+.Search-main-container .search-icon path {
+  fill: var(--asideSvgColor);
 }
 .Search-main-container .search-icon {
   position: absolute;
@@ -182,12 +178,16 @@ main {
 }
 /*  */
 .embla {
-  width: 950px;
   border-radius: 41px;
   overflow: hidden;
 }
 .embla__container {
   height: 387px;
+  display: flex;
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__slide {
   display: flex;
 }
 .animeAdvertaisment {
@@ -195,18 +195,11 @@ main {
   margin-right: 20px;
   width: 944px;
   height: 387px;
-  background: linear-gradient(
-    180deg,
-    rgba(42, 32, 63, 1) 0%,
-    rgba(22, 13, 43, 1) 100%
-  );
+  background: var(--animeAdsColor);
   border-radius: 41px;
   border: 1px solid #ffffff20;
   grid-area: 1 / 1 / 2 / 2;
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .AnimeNamePlayBootom {
   width: 294px;
@@ -220,35 +213,34 @@ main {
 }
 .animeAdvertaisment h2 {
   font-size: 36px;
-  color: #ffffff;
+  color: var(--whiteColor);
 }
 .animeAdvertaisment .WatchButtom button {
   all: unset;
   width: 114px;
   height: 57px;
-  background: linear-gradient(45deg, #a4508b, #5f0a87, #2d033b);
+  background: var(--accessoriesDivBackgroundColor);
   border-radius: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--whiteColor);
   font-size: 14px;
   cursor: pointer;
   transition: 500ms;
 }
 .animeAdvertaisment .WatchButtom button:hover {
-  box-shadow: 0 4px 10px rgba(164, 80, 139, 0.4),
-    0 2px 20px rgba(95, 10, 135, 0.6), 0 8px 30px rgba(45, 3, 59, 0.8);
+  box-shadow: var(--buttonHoverBoxShadow);
 }
 .animeAdvertaisment .WatchButtom {
   width: 241px;
   height: 63px;
-  background-color: #231c3390;
+  background-color: var(--watchButtonColor);
   display: flex;
   justify-content: end;
   align-items: center;
   border-radius: 21px;
-  border: 1px solid #ffffff20;
+  border: 1px solid var(--borderBackgroundColor);
   padding-right: 3px;
 }
 .animeAdvertaisment img {
@@ -259,7 +251,7 @@ main {
 .WatchButtom p {
   margin-right: 21px;
   font-size: 14px;
-  color: #ffffff40;
+  color: var(--watchButtonColorParagraph);
 }
 .soloLeveling {
   width: 680px;
@@ -279,13 +271,9 @@ main {
   height: 1059px;
   grid-area: 1 / 2 / 4 / 3;
   margin-left: 55px;
-  background: linear-gradient(
-    180deg,
-    rgba(42, 32, 63, 1) 0%,
-    rgba(22, 13, 43, 1) 100%
-  );
+  background: var(--comunityBoard);
   border-radius: 42px;
-  border: 1px solid #ffffff20;
+  border: 1px solid var(--borderBackgroundColor);
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -293,16 +281,12 @@ main {
 .social-title {
   margin: 39px 0px 45px 48px;
   font-size: 22px;
-  color: #ffffff80;
+  color: var(--socialTitleText);
 }
 .comunity .social {
   width: 343px;
   height: 113px;
-  background: linear-gradient(
-    180deg,
-    rgba(86, 80, 100, 1) 0%,
-    rgba(63, 52, 87, 1) 100%
-  );
+  background: var(--lastAnimeBoard);
   border-radius: 33px;
   margin-bottom: 65px;
   margin: 0px 0px 65px 40px;
@@ -312,12 +296,12 @@ main {
 }
 .LastAnime {
   font-size: 14px;
-  color: #ffffff80;
+  color: var(--socialTitleText);
   margin-bottom: 2px;
 }
 .social .animeName {
   font-size: 18px;
-  color: white;
+  color: var(--whiteColor);
 }
 .social .yourAnime {
   display: flex;
@@ -330,15 +314,15 @@ main {
   align-items: center;
   justify-content: center;
   gap: 17px;
-  color: #62a539;
+  color: var(--lastAnimeBoardButton);
   margin-right: 31px;
 }
 .comunity .social .ContinueWatching {
   width: 51px;
   height: 51px;
   border-radius: 50px;
-  border: 2px solid #62a539;
-  background-color: #ffffff01;
+  border: 2px solid var(--lastAnimeBoardButton);
+  background-color: var(--ContinueWatchingButtonColor);
   transition: 300ms;
   cursor: pointer;
   display: flex;
@@ -346,7 +330,7 @@ main {
   justify-content: center;
 }
 .comunity .social .ContinueWatching:hover {
-  background-color: #62a53920;
+  background-color: var(--ContinueWatchingButtonColorHover);
 }
 .comunity .online-friend {
   width: 217px;
@@ -358,14 +342,14 @@ main {
   margin-left: 45px;
 }
 .anime-name span {
-  color: #62a539;
+  color: var(--lastAnimeBoardButton);
   font-size: 11px;
 }
 .anime-name .whoRecomendedForYou {
-  color: #ffe459;
+  color: var(--yellowButtonColor);
 }
 .anime-name .nameRecomender {
-  color: #f43b86;
+  color: var(--redButtonColor);
   cursor: default;
 }
 .comunity .friend-rec {
@@ -378,34 +362,30 @@ main {
   margin-top: 40px;
 }
 .friend-rec .watchButton {
-  border: 1px solid #f43b86;
+  border: 1px solid var(--redButtonColor);
   width: 70px;
   height: 40px;
   margin-left: 50px;
-  color: #f43b86;
+  color: var(--redButtonColor);
 }
 .online-friend .watchButton:hover {
-  background-color: #f43b8620;
+  background-color: var(--grayButtonColor);
   scale: 1.1;
 }
 .online-friend .joinButton {
-  border: 1px solid #ffe459;
+  border: 1px solid var(--yellowButtonColor);
   width: 70px;
   height: 40px;
   margin-left: 50px;
-  color: #ffe459;
+  color: var(--yellowButtonColor);
 }
 .online-friend .joinButton:hover {
-  background-color: #ffe45920;
+  background-color: var(--ContinueWatchingButtonColorHover);
   scale: 1.1;
 }
 .comunity .message {
   display: flex;
-  background: linear-gradient(
-    180deg,
-    rgba(86, 80, 100, 1) 0%,
-    rgba(63, 52, 87, 1) 100%
-  );
+  background: var(--messageBackgroundColor);
   width: 424px;
   height: 192px;
   border-radius: 42px;
@@ -420,12 +400,8 @@ main {
   border-radius: 32px;
   border: unset;
   outline: unset;
-  background: linear-gradient(
-    180deg,
-    rgba(86, 80, 100, 1) 0%,
-    rgba(63, 52, 87, 1) 100%
-  );
-  color: white;
+  background: var(--messageInputColor);
+  color: var(--whiteColor);
   padding: 18px 93px 15px 52px;
 }
 
@@ -438,11 +414,11 @@ main {
 }
 .your-party-two-paragraph .yourParty {
   font-size: 14px;
-  color: #ffffff80;
+  color: var(--socialTitleText);
   margin-bottom: 9px;
 }
 .your-party .your-party-two-paragraph .foody {
-  color: white;
+  color: var(--whiteColor);
   font-size: 14px;
 }
 .muteAndCallEnd {
@@ -467,7 +443,7 @@ main {
   height: 50px;
 }
 .microfoneMute:hover {
-  background-color: #ffe459;
+  background-color: var(--yellowButtonColor);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,12 +458,12 @@ main {
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  background-color: #f43b86;
+  background-color: var(--redButtonColor);
   margin-left: 10px;
 }
 .message-writing-place .sendButton {
   border: none;
-  background: linear-gradient(45deg, #a4508b, #5f0a87, #2d033b);
+  background: var(--accessoriesDivBackgroundColor);
   transition: 300ms;
   cursor: pointer;
   width: 57px;
@@ -501,8 +477,7 @@ main {
 }
 .message-writing-place .sendButton:hover {
   scale: 1.1;
-  box-shadow: 0 4px 10px rgba(164, 80, 139, 0.4),
-    0 2px 20px rgba(95, 10, 135, 0.6), 0 8px 30px rgba(45, 3, 59, 0.8);
+  box-shadow: var(--buttonHoverBoxShadow);
 }
 .message-writing-place img {
   position: absolute;
@@ -513,6 +488,7 @@ main {
   max-width: 944px;
   height: 290px;
   grid-area: 2 / 1 / 3 / 2;
+  margin-top: 40px;
 }
 /*  */
 .popularAnimeButton {
@@ -521,24 +497,27 @@ main {
   height: 60px;
 }
 .popularAnimeButton button {
-  background-color: #21173b;
+  background-color: var(--button-background-color);
   border: none;
   width: 35px;
   height: 35px;
   border-radius: 50%;
   cursor: pointer;
 }
-.popularAnimeButton #prev img {
+.popularAnimeButton #prev .arrowSvgColor {
   transform: rotate(180deg);
+}
+.arrowSvgColor path {
+  fill: var(--arrowColor);
 }
 .popularAnimeButton #next {
   margin-left: 10px;
 }
 .popularAnimeButton #next:hover {
-  background-color: #21173b80;
+  background-color: var(--grayButtonHover);
 }
 .popularAnimeButton #prev:hover {
-  background-color: #21173b80;
+  background-color: var(--grayButtonHover);
 }
 /*  */
 .animeList {
@@ -551,12 +530,12 @@ main {
   width: 223px;
   height: 27px;
   font-size: 22px;
-  color: white;
+  color: var(--whiteColor);
 }
 .mostPopoularAnime h3 {
   width: 217px;
   height: 22px;
-  color: white;
+  color: var(--whiteColor);
   font-size: 18px;
   margin-top: 24px;
   margin-left: 19px;
@@ -564,42 +543,24 @@ main {
 .mostPopoularAnime p {
   width: 184px;
   height: 17px;
-  color: #ffffff60;
+  color: var(--mostPopularAnimeParagraph);
   margin-top: 8px;
   margin-left: 19px;
 }
-.mainAnimeListContainer {
-  width: 944px;
-  overflow: hidden;
-}
-.mainAnimeListContaine.embla {
-  display: hidden;
-}
 .mainAnimeListContainer .embla__container {
-  display: flex;
   gap: 22px;
-}
-.mainAnimeListContainer .embla__container .embla__slide {
-  min-width: 296px;
 }
 .animeListStyle {
   width: 296px;
   height: 260px;
-  border: 2px solid #ffffff20;
-  display: flex;
+  border: 2px solid var(--borderBackgroundColor);
   flex-direction: column;
   border-radius: 44px;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
+
 .animeListStyle:hover {
-  background: linear-gradient(
-    180deg,
-    rgba(42, 32, 63, 1) 0%,
-    rgba(22, 13, 43, 1) 100%
-  );
+  background: var(--animeListStyleHover);
 }
 .imgFrame img {
   width: 296px;
@@ -611,22 +572,18 @@ main {
   grid-area: 3 / 1 / 4 / 2;
   display: flex;
   gap: 28px;
-  margin-top: 48px;
+  margin-top: 90px;
 }
 .accessories {
   width: 300px;
   height: 253px;
-  background: linear-gradient(
-    180deg,
-    rgba(42, 32, 63, 1) 0%,
-    rgba(22, 13, 43, 1) 100%
-  );
+  background: var(--libraryDivBackgroundColor);
   border-radius: 46px;
   position: relative;
-  border: 1px solid #ffffff20;
+  border: 1px solid var(--borderBackgroundColor);
 }
 .accessories h2 {
-  color: #ffffff90;
+  color: var(--socialTitleText);
   font-size: 22px;
 }
 .accessories .onlineshopadds {
@@ -647,13 +604,9 @@ main {
 .libraryTwo {
   width: 623px;
   height: 253px;
-  background: linear-gradient(
-    180deg,
-    rgba(42, 32, 63, 1) 0%,
-    rgba(22, 13, 43, 1) 100%
-  );
+  background: var(--libraryDivBackgroundColor);
   border-radius: 46px;
-  border: 1px solid #ffffff20;
+  border: 1px solid var(--borderBackgroundColor);
 }
 .library .Library-title-and-arrow {
   display: flex;
@@ -665,7 +618,7 @@ main {
 }
 .library .Library-title {
   margin: 25px 0px 22px 37px;
-  color: #ffffff90;
+  color: var(--socialTitleText);
   font-size: 22px;
 }
 .union-container {
@@ -679,33 +632,33 @@ main {
   all: unset;
   width: 105px;
   height: 35px;
-  border: 1px solid #f43b86;
+  border: 1px solid var(--redButtonColor);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f43b86;
+  color: var(--redButtonColor);
   cursor: pointer;
   transition: 300ms;
 }
 .union-container .red-button:hover {
-  background-color: #f43b8620;
+  background-color: var(--grayButtonColor);
   scale: 1.1;
 }
 .union-container .yellow-button {
-  border: 1px solid #ffe459;
-  color: #ffe459;
+  border: 1px solid var(--yellowButtonColor);
+  color: var(--yellowButtonColor);
 }
 .union-container .yellow-button:hover {
-  background-color: #ffe45920;
+  background-color: var(--yellowButtonHover);
   scale: 1.1;
 }
 .union-container .gray-button {
-  border: 1px solid #ffffff70;
-  color: #ffffff70;
+  border: 1px solid var(--socialTitleText);
+  color: var(--socialTitleText);
 }
 .union-container .gray-button:hover {
-  background-color: #ffe45920;
+  background-color: var(--yellowButtonHover);
   scale: 1.1;
 }
 .library .anime-name {
@@ -728,7 +681,9 @@ main {
   display: flex;
   align-items: center;
 }
-
+svg path {
+  fill: var(--button-background-color);
+}
 .library .anime-name {
   display: flex;
   flex-direction: column;
@@ -736,28 +691,92 @@ main {
 }
 .library .anime-name h3 {
   font-size: 14px;
-  color: white;
+  color: var(--whiteColor);
 }
 .library .anime-name p {
-  color: #ffffff60;
+  color: var(--mostPopularAnimeParagraph);
   font-size: 9px;
-}
-.accessories .onlineshopadds path:hover {
-  fill: #5f0a87;
-  opacity: 100;
 }
 .month-day {
   font-size: 13px;
-  color: #ffffff80;
+  color: var(--socialTitleText);
   margin-bottom: 3px;
 }
 .relese-year {
   font-size: 9px;
-  color: #ffffff80;
+  color: var(--socialTitleText);
 }
 .imgFrame {
   width: 296px;
   height: 164px;
   border-radius: 44px;
   overflow: hidden;
+}
+footer {
+  border-top: 2px solid var(--borderBackgroundColor);
+  margin-top: 30px;
+  max-width: 1615px;
+  width: 100%;
+}
+
+.mainContainer {
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+.MORENTcontainer {
+  padding: 80px 60px 0px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo-desc {
+  width: 292px;
+  height: 48px;
+  margin-right: 452px;
+}
+.description {
+  margin-top: 16px;
+  color: var(--whiteColor);
+}
+.footerList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 20px;
+}
+.footerList li {
+  color: var(--whiteColor);
+}
+.footerList a {
+  text-decoration: none;
+}
+li:hover {
+  color: var(--redButtonColor);
+}
+.footerList h4 {
+  cursor: default;
+  font-size: 20px;
+}
+.footerEND {
+  display: flex;
+  border-top: 1px solid var(--footerLineColor);
+  margin: 45px auto;
+  max-width: 1320px;
+  width: 100%;
+  padding-top: 50px;
+  justify-content: space-between;
+  color: var(--socialTitleText);
+}
+.footerEND a {
+  text-decoration: none;
+  color: var(--socialTitleText);
+  display: flex;
+}
+.sideLogoInFooter {
+  width: 80px;
+  height: 80px;
+}
+footer h4 {
+  color: var(--socialTitleText);
 }

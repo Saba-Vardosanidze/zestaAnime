@@ -125,3 +125,159 @@ table {
 a {
   text-decoration: none;
 }
+:root {
+  --asideColor: linear-gradient(
+    180deg,
+    rgba(17, 5, 44, 1) 0%,
+    rgba(17, 5, 44, 1) 2%,
+    rgba(17, 5, 44, 1) 84%
+  );
+  --secondMainContainerColor: linear-gradient(
+    180deg,
+    rgba(17, 5, 44, 1) 0%,
+    rgba(17, 5, 44, 1) 2%,
+    rgba(17, 5, 44, 1) 84%
+  );
+  --animeAdsColor: linear-gradient(
+    180deg,
+    rgba(42, 32, 63, 1) 0%,
+    rgba(22, 13, 43, 1) 100%
+  );
+  --comunityBoard: linear-gradient(
+    180deg,
+    rgba(42, 32, 63, 1) 0%,
+    rgba(22, 13, 43, 1) 100%
+  );
+  --lastAnimeBoard: linear-gradient(
+    180deg,
+    rgba(86, 80, 100, 1) 0%,
+    rgba(63, 52, 87, 1) 100%
+  );
+  --messageBackgroundColor: linear-gradient(
+    180deg,
+    rgba(86, 80, 100, 1) 0%,
+    rgba(63, 52, 87, 1) 100%
+  );
+  --messageInputColor: linear-gradient(
+    180deg,
+    rgba(86, 80, 100, 1) 0%,
+    rgba(63, 52, 87, 1) 100%
+  );
+  --libraryDivBackgroundColor: linear-gradient(
+    180deg,
+    rgba(42, 32, 63, 1) 0%,
+    rgba(22, 13, 43, 1) 100%
+  );
+  --accessoriesDivBackgroundColor: linear-gradient(
+    45deg,
+    #a4508b,
+    #5f0a87,
+    #2d033b
+  );
+  --animeListStyleHover: linear-gradient(
+    180deg,
+    rgba(42, 32, 63, 1) 0%,
+    rgba(22, 13, 43, 1) 100%
+  );
+  --buttonHoverBoxShadow: 0 4px 10px rgba(164, 80, 139, 0.4),
+    0 2px 20px rgba(95, 10, 135, 0.6), 0 8px 30px rgba(45, 3, 59, 0.8);
+  --buttonBackgroundColor: linear-gradient(45deg, #a4508b, #5f0a87, #2d033b);
+  --button-background-color: #21173b;
+  --borderBackgroundColor: #ffffff20;
+  --inputBackgroundColor: #261b3e80;
+  --whiteColor: #ffffff;
+  --watchButtonColor: #231c3390;
+  --watchButtonColorParagraph: #ffffff40;
+  --socialTitleText: #ffffff80;
+  --mostPopularAnimeParagraph: #ffffff60;
+  --lastAnimeBoardButton: #62a539;
+  --ContinueWatchingButtonColor: #ffffff01;
+  --ContinueWatchingButtonColorHover: #62a53920;
+  --yellowButtonColor: #ffe459;
+  --yellowButtonHover: #ffe45920;
+  --redButtonColor: #f43b86;
+  --grayButtonColor: #f43b8620;
+  --grayButtonHover: #21173b80;
+  --footerLineColor: #ffffff30;
+  --asideSvgColor: #ffffff;
+  --arrowColor: #ffffff70;
+}
+body.dark {
+  --asideColor: linear-gradient(
+    180deg,
+    rgba(240, 250, 255, 1) 0%,
+    rgba(220, 235, 250, 1) 100%
+  );
+  --secondMainContainerColor: linear-gradient(
+    180deg,
+    rgba(240, 250, 255, 1) 0%,
+    rgba(220, 235, 250, 1) 100%
+  );
+  --animeAdsColor: linear-gradient(
+    180deg,
+    rgba(200, 220, 240, 1) 0%,
+    rgba(180, 200, 230, 1) 100%
+  );
+  --comunityBoard: linear-gradient(
+    180deg,
+    rgba(200, 220, 240, 1) 0%,
+    rgba(180, 200, 230, 1) 100%
+  );
+  --lastAnimeBoard: linear-gradient(
+    180deg,
+    rgba(190, 210, 230, 1) 0%,
+    rgba(170, 190, 220, 1) 100%
+  );
+  --messageBackgroundColor: linear-gradient(
+    180deg,
+    rgba(190, 210, 230, 1) 0%,
+    rgba(170, 190, 220, 1) 100%
+  );
+  --messageInputColor: linear-gradient(
+    180deg,
+    rgba(190, 210, 230, 1) 0%,
+    rgba(170, 190, 220, 1) 100%
+  );
+  --libraryDivBackgroundColor: linear-gradient(
+    180deg,
+    rgba(200, 220, 240, 1) 0%,
+    rgba(180, 200, 230, 1) 100%
+  );
+  --accessoriesDivBackgroundColor: linear-gradient(
+    45deg,
+    #a1c4fd,
+    #84b6f1,
+    #5a8ed1
+  );
+  --animeListStyleHover: linear-gradient(
+    180deg,
+    rgba(200, 220, 240, 1) 0%,
+    rgba(180, 200, 230, 1) 100%
+  );
+  --buttonBackgroundColor: linear-gradient(
+    180deg,
+    rgba(240, 250, 255, 1) 0%,
+    rgba(220, 235, 250, 1) 100%
+  );
+  --buttonHoverBoxShadow: 0 4px 10px rgba(180, 210, 230, 0.4),
+    0 2px 20px rgba(150, 190, 220, 0.6), 0 8px 30px rgba(120, 170, 210, 0.8);
+  --button-background-color: #d0e8ff;
+  --borderBackgroundColor: #00000030;
+  --inputBackgroundColor: #c8e0ff80;
+  --whiteColor: #333;
+  --watchButtonColor: #a5c5e0;
+  --watchButtonColorParagraph: #33333340;
+  --socialTitleText: #33333380;
+  --mostPopularAnimeParagraph: #33333360;
+  --lastAnimeBoardButton: #4a8bb0;
+  --ContinueWatchingButtonColor: #33333310;
+  --ContinueWatchingButtonColorHover: #4a8bb020;
+  --yellowButtonColor: #ffad09;
+  --yellowButtonHover: #ffcc6640;
+  --redButtonColor: #ff4a50;
+  --grayButtonColor: #ff4a5040;
+  --grayButtonHover: #d0e8ff80;
+  --footerLineColor: #13131316;
+  --asideSvgColor: rgb(4, 4, 146);
+  --arrowColor: #4a8bb0;
+}

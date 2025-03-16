@@ -1,31 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const emblaNode = document.querySelector(".embla");
+  const emblaNode1 = document.querySelector("#embla1");
+  const emblaNode2 = document.querySelector("#embla2");
 
-  const options = {
-    loop: window.innerWidth,
+  const embla1 = EmblaCarousel(emblaNode1, {
+    loop: true,
     align: "start",
     slidesToScroll: 1,
-  };
+  });
+
   setInterval(() => {
-    embla.scrollNext();
+    embla1.scrollNext();
   }, 5000);
 
-  const embla = EmblaCarousel(emblaNode, options);
+  const embla2 = EmblaCarousel(emblaNode2, {
+    loop: false,
+    align: "start",
+    slidesToScroll: 1,
+  });
 
-  const prev = document.getElementById("prev");
-  const next = document.getElementById("next");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
 
-  if (prev) prev.addEventListener("click", () => embla.scrollPrev());
-  if (next) next.addEventListener("click", () => embla.scrollNext());
+  prevButton.addEventListener("click", () => {
+    embla2.scrollPrev();
+  });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") embla.scrollNext();
-    if (event.key === "ArrowLeft") embla.scrollPrev();
+  nextButton.addEventListener("click", () => {
+    embla2.scrollNext();
   });
 });
-
+//
 const xbutton = document.getElementById("xButton");
 const search = document.getElementById("searchInput");
 xbutton.addEventListener("click", function () {
   search.value = "";
+});
+//
+const themeToggle = document.getElementById("themeToggle");
+function updateSavedText(theme) {
+  if (theme === "dark") {
+    themeToggle.innerHTML = `<img src="assets/img/svg/moon.svg" alt="darkMode" />`;
+  } else {
+    themeToggle.innerHTML = `<img src="assets/img/svg/sun.svg" alt="lightMode" />`;
+  }
+}
+
+function appleSavedTheme() {
+  const currentTheme = localStorage.getItem("theme") || "light";
+
+  document.body.classList.toggle("dark", currentTheme === "dark");
+
+  updateSavedText(currentTheme);
+}
+
+themeToggle.addEventListener("click", function () {
+  const isDarkmode = document.body.classList.toggle("dark");
+
+  localStorage.setItem("theme", isDarkmode ? "dark" : "light");
+  updateSavedText(isDarkmode ? "dark" : "light");
 });
